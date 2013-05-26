@@ -18,12 +18,29 @@ if(trim($email) == '') {
 	exit();
 }
 
+// AC 26/5/2013 Insert email into database
+require_once("../../map/inc/db_connection.inc.php");
+$cnx->query("INSERT INTO bc_mailing (email, created) VALUES ('$email',NOW())");
+
+if ($cnx->errno == 1062) {
+  echo 'This email is already registered!';
+} else {
+  // Email has been registered successfully, echo a success page.
+  echo "<fieldset>";
+  echo "<div id='success_page'>";
+  echo "<h1>Email Sent Successfully.</h1>";
+  echo "<p>Thank you! We will contact you once we`ll launch the website!</p>";
+  echo "</div>";
+  echo "</fieldset>";
+}
+
+/*
 // Configuration option.
 // Enter the email address that you want to emails to be sent to.
 // Example $address = "joe.doe@yourdomain.com";
 
 //$address = "example@example.net";
-$address = "contact@bounce-trip.com";
+$address = "contact@bouncetrip.com";
 
 
 // Configuration option.
@@ -63,4 +80,4 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	echo 'ERROR!';
 
-}
+}*/
