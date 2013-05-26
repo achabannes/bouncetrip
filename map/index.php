@@ -34,7 +34,7 @@ elseif ($type=="mapbox") {
 				});
 			});
 		</script>
-		<?php require_once($type.".inc.php"); ?>
+		<?php require_once("inc/".$type.".inc.php"); ?>
 	</head>
 	<body>
 		<form name="changeType" method="post">
@@ -49,7 +49,7 @@ elseif ($type=="mapbox") {
 			<div id="map" class="dark"></div>
 			<div class='update'>
 				<?php
-					$fileList = array("index.php","style.css",$type.".inc.php",$type.".js");
+					$fileList = array("index.php","style.css","inc/".$type.".inc.php","js/".$type.".js");
 					foreach($fileList as $file) {
 						if (file_exists($file)) {
 					    echo "<strong>$file</strong> | latest: " . date ("Y/n/d H:i:s", filemtime($file)) . "<br>";
@@ -57,8 +57,8 @@ elseif ($type=="mapbox") {
 					}
 				?>
 			</div>
-			<?php if ($type == "mapbox") { require_once("form.inc.php"); } ?>
+			<?php if ($type == "mapbox") { require_once("inc/form.inc.php"); } ?>
 		</div>
-		<script type="text/javascript" src="<?php echo $type; ?>.js"></script>
+		<script type="text/javascript" src="js/<?php echo $type; ?>.js"></script>
   </body>
 </html>
