@@ -108,18 +108,18 @@ input,textarea {
 
 @font-face {
     font-family: 'CopseRegular';
-    src: url('fonts/copse/Copse-Regular-webfont.eot');
-    src: url('fonts/copse/Copse-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/copse/Copse-Regular-webfont.woff') format('woff'),
-         url('fonts/copse/Copse-Regular-webfont.ttf') format('truetype'),
-         url('fonts/copse/Copse-Regular-webfont.svg#CopseRegular') format('svg');
+    src: url('res/fonts/copse/Copse-Regular-webfont.eot');
+    src: url('res/fonts/copse/Copse-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('res/fonts/copse/Copse-Regular-webfont.woff') format('woff'),
+         url('res/fonts/copse/Copse-Regular-webfont.ttf') format('truetype'),
+         url('res/fonts/copse/Copse-Regular-webfont.svg#CopseRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
 	font: 12px/20px 'CopseRegular', CopseRegular, Helvetica, Arial, sans-serif;
-	background: #323232 url(images/container-bg.png) repeat-y;
+	background: #323232 url(res/images/container-bg.png) repeat-y;
 	margin:0;
 	padding:0;
 	color:#818181;
@@ -166,28 +166,29 @@ p.copyright {
 }
 
 .top-page {
-	background:url(images/light_alu.png) repeat-x left top;
+	background:url(res/images/light_alu.png) repeat-x left top;
 	width:806px;
 	height:24px;
 	position:relative;
 }
 
 .content-page {
-	background:url(images/light_alu.png) repeat left top;
+	background:url(res/images/light_alu.png) repeat left top;
 	width:806px;
 	height:435px;
 	position:relative;
 }
 
 .bottom-page {
-	background:url(images/light_alu.png) repeat-x left top;
+	background:url(res/images/light_alu.png) repeat-x left top;
 	width:806px;
 	height:55px;
 }
 
+/*
 .top-spiral {
 	position:absolute;
-	background:url(images/spiral.png) no-repeat scroll 0 0;
+	background:url(res/images/spiral.png) no-repeat scroll 0 0;
 	width:38px;
 	height:89px;
 	left:-9px;
@@ -196,12 +197,13 @@ p.copyright {
 
 .bottom-spiral {
 	position:absolute;
-	background:url(images/spiral.png) no-repeat scroll 0 0;
+	background:url(res/images/spiral.png) no-repeat scroll 0 0;
 	width:38px;
 	height:89px;
 	left:-9px;
 	top:293px;
 }
+*/
 
 .row {
 	width:100%;
@@ -265,7 +267,7 @@ h4 {
 	width:100px;
 	height:100px;
 	border:1px solid #e5e5e5;	
-	background:#fdfdfd url(images/form-pattern.png) repeat scroll 0 0;
+	background:#fdfdfd url(res/images/form-pattern.png) repeat scroll 0 0;
 	-moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);		
@@ -291,7 +293,7 @@ h4 {
 	clear:both;
 	width:470px;
 	border:1px solid #e5e5e5;
-	background:#fdfdfd url(images/form-pattern.png) repeat scroll 0 0;
+	background:#fdfdfd url(res/images/form-pattern.png) repeat scroll 0 0;
 	-moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);	
@@ -440,11 +442,11 @@ textarea#comments {
 }
 #ribbon {
 	position:absolute;
-	background:url(images/ribbon.png) no-repeat scroll left top;
+	background:url(res/images/ribbon.png) no-repeat scroll left top;
 	width:70px;
 	height:45px;
 	top:45px;
-	right:-64px;
+	right:-70px; /*old value -64*/
 	display:block;
 	text-indent:-9999px;
 	z-index:100;
@@ -471,37 +473,37 @@ ul.social li a {
 	display:inline-block;
 }
 li a.facebook {
-	background:url(images/social/facebook.png) no-repeat scroll center center;
+	background:url(res/images/social/facebook.png) no-repeat scroll center center;
 }
 li a.twitter {
-	background:url(images/social/twitter.png) no-repeat scroll center center;
+	background:url(res/images/social/twitter.png) no-repeat scroll center center;
 }
 li a.pinterest {
-	background:url(images/social/pinterest.png) no-repeat scroll center center;
+	background:url(res/images/social/pinterest.png) no-repeat scroll center center;
 }
 li a.blog {
-	background:url(images/social/blog.png) no-repeat scroll center center;
+	background:url(res/images/social/blog.png) no-repeat scroll center center;
 }
 li a.youtube {
-	background:url(images/social/youtube.png) no-repeat scroll center center;
+	background:url(res/images/social/youtube.png) no-repeat scroll center center;
 }
 li a.skype {
-	background:url(images/social/skype.png) no-repeat scroll center center;
+	background:url(res/images/social/skype.png) no-repeat scroll center center;
 }
 li a.dribbble {
-	background:url(images/social/dribbble.png) no-repeat scroll center center;
+	background:url(res/images/social/dribbble.png) no-repeat scroll center center;
 }
 li a.digg {
-	background:url(images/social/digg.png) no-repeat scroll center center;
+	background:url(res/images/social/digg.png) no-repeat scroll center center;
 }
 li a.delicious {
-	background:url(images/social/delicious.png) no-repeat scroll center center;
+	background:url(res/images/social/delicious.png) no-repeat scroll center center;
 }
 li a.vimeo {
-	background:url(images/social/vimeo.png) no-repeat scroll center center;
+	background:url(res/images/social/vimeo.png) no-repeat scroll center center;
 }
 li a.dropbox {
-	background:url(images/social/dropbox.png) no-repeat scroll center center;
+	background:url(res/images/social/dropbox.png) no-repeat scroll center center;
 }
 
 
