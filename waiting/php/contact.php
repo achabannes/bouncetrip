@@ -17,33 +17,33 @@ $comments = $_POST['comments'];
 $verify   = $_POST['verify'];
 
 if(trim($name) == '') {
-	echo '<div class="error_message">Attention! You must enter your name.</div>';
+	echo '<div class="error_message">Attention&nbsp;! Vous devez entrer un nom.</div>';
 	exit();
 } else if(trim($email) == '') {
-	echo '<div class="error_message">Attention! Please enter a valid email address.</div>';
+	echo '<div class="error_message">Attention&nbsp;! Veuillez entrer un e-mail valide.</div>';
 	exit();
 } else if(trim($phone) == '') {
-	echo '<div class="error_message">Attention! Please enter a valid phone number.</div>';
+	echo '<div class="error_message">Attention&nbsp;! Veuillez entrer un n° de téléphone valide.</div>';
 	exit();
 } else if(!is_numeric($phone)) {
-	echo '<div class="error_message">Attention! Phone number can only contain digits.</div>';
+	echo '<div class="error_message">Attention&nbsp;! Seuls des chiffres sont autorisés dans le n° de téléphone.</div>';
 	exit();
 } else if(!isEmail($email)) {
-	echo '<div class="error_message">Attention! You have entered an invalid e-mail address. Please try again.</div>';
+	echo '<div class="error_message">Attention&nbsp;! L\'email entré est invalide. Veuillez recommencer.</div>';
 	exit();
 }
 
 if(trim($subject) == '') {
-	echo '<div class="error_message">Attention! Please enter a subject.</div>';
+	echo '<div class="error_message">Attention&nbsp;! Veuillez entrer un sujet.</div>';
 	exit();
 } else if(trim($comments) == '') {
-	echo '<div class="error_message">Attention! Please enter your message.</div>';
+	echo '<div class="error_message">Attention&nbsp;! Veuillez entrer un message.</div>';
 	exit();
 } else if(!isset($verify) || trim($verify) == '') {
-	echo '<div class="error_message">Attention! Please enter the verification number.</div>';
+	echo '<div class="error_message">Attention&nbsp;! Veuillez entrer le numéro de vérification.</div>';
 	exit();
 } else if(trim($verify) != '4') {
-	echo '<div class="error_message">Attention! The verification number you entered is incorrect.</div>';
+	echo '<div class="error_message">Attention&nbsp;! Le numéro de vérification entré est incorrect.</div>';
 	exit();
 }
 
@@ -56,8 +56,7 @@ if(get_magic_quotes_gpc()) {
 // Enter the email address that you want to emails to be sent to.
 // Example $address = "joe.doe@yourdomain.com";
 
-//$address = "example@example.net";
-$address = "contact@bounce-trip.com";
+$address = "contact@bouncetrip.com";
 
 
 // Configuration option.
@@ -90,8 +89,8 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	echo "<fieldset>";
 	echo "<div id='success_page'>";
-	echo "<h1>Email Sent Successfully.</h1>";
-	echo "<p>Thank you <strong>$name</strong>, your message has been submitted to us.</p>";
+	echo "<h1>Email envoyé</h1>";
+	echo "<p>Merci <strong>$name</strong>, votre message a bien été envoyé.</p>";
 	echo "</div>";
 	echo "</fieldset>";
 

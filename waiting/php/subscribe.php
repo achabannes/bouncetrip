@@ -11,10 +11,10 @@ if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 
 $email    = $_POST['email'];
 if(trim($email) == '') {
-	echo '<div class="error_message">Attention! Please enter a valid email address.</div>';
+	echo '<div class="error_message">Attention&nbsp;! Veuillez entrer un e-mail valide.</div>';
 	exit();
 } else if(!isEmail($email)) {
-	echo '<div class="error_message">Attention! You have entered an invalid e-mail address. Please try again.</div>';
+	echo '<div class="error_message">Attention&nbsp;! L\'email entré est invalide. Veuillez recommencer.</div>';
 	exit();
 }
 
@@ -23,13 +23,13 @@ require_once("../../map/inc/db_connection.inc.php");
 $cnx->query("INSERT INTO bc_mailing (email, created) VALUES ('$email',NOW())");
 
 if ($cnx->errno == 1062) {
-  echo 'This email is already registered!';
+  echo 'Cet email existe déjà!';
 } else {
   // Email has been registered successfully, echo a success page.
   echo "<fieldset>";
   echo "<div id='success_page'>";
-  echo "<h1>Email Sent Successfully.</h1>";
-  echo "<p>Thank you! We will contact you once we`ll launch the website!</p>";
+  echo "<h1>Email enregistré</h1>";
+  echo "<p>Merci&nbsp;! Vous recevrez un e-mail dès que le site sera lancé&nbsp;!</p>";
   echo "</div>";
   echo "</fieldset>";
 }
