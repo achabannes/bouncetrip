@@ -23,7 +23,7 @@ require_once("../../map/inc/db_connection.inc.php");
 $cnx->query("INSERT INTO bc_mailing (email, created) VALUES ('$email',NOW())");
 
 if ($cnx->errno == 1062) {
-  echo 'Cet email existe déjà!';
+  echo 'Cet email existe déjà&nbsp;!';
 } else {
   // Email has been registered successfully, echo a success page.
   echo "<fieldset>";
